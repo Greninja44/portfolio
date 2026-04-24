@@ -42,7 +42,7 @@ const channels = [
     id: "linkedin",
     label: "LINKEDIN",
     handle: "Adarsh D",
-    url: "www.linkedin.com/in/adarsh-d-443188252",
+    url: "https://www.linkedin.com/in/adarsh-d-443188252/",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8">
         <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
