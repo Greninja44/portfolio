@@ -72,7 +72,7 @@ export default function Projects() {
         className="font-mono font-bold tracking-widest text-[20px] md:text-[28px] text-primary mb-12 flex items-center gap-4 uppercase"
       >
         <span className="w-8 h-1 bg-accent"></span>
-        FLEET HANGAR / CONFIG
+        PROJECTS
       </motion.h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">

@@ -37,6 +37,19 @@ const channels = [
         <polyline points="22,6 12,13 2,6"></polyline>
       </svg>
     )
+  },
+  {
+    id: "linkedin",
+    label: "LINKEDIN",
+    handle: "Adarsh D",
+    url: "www.linkedin.com/in/adarsh-d-443188252",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8">
+        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+        <rect x="2" y="9" width="4" height="12"></rect>
+        <circle cx="4" cy="4" r="2"></circle>
+      </svg>
+    )
   }
 ];
 
@@ -46,18 +59,18 @@ export default function CommLink() {
 
   return (
     <section id="contact" className="relative py-32 px-6 md:px-16 container mx-auto min-h-screen flex flex-col items-center justify-center overflow-hidden">
-      
+
       {/* Minimalist Concentric Circles Background */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-20">
         <div className="w-[600px] h-[600px] rounded-full border border-white/5 relative flex items-center justify-center">
           <div className="w-[400px] h-[400px] rounded-full border border-white/5 relative flex items-center justify-center">
-             <div className="w-[200px] h-[200px] rounded-full border border-white/5"></div>
+            <div className="w-[200px] h-[200px] rounded-full border border-white/5"></div>
           </div>
           <div className="absolute inset-0 rounded-full bg-radar-sweep animate-spin-slow"></div>
         </div>
       </div>
 
-      <motion.h2 
+      <motion.h2
         ref={ref}
         initial={{ opacity: 0, y: -20 }}
         animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
@@ -67,7 +80,7 @@ export default function CommLink() {
         Connect
       </motion.h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 w-full max-w-5xl relative z-10 mb-20">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 w-full max-w-6xl relative z-10 mb-20">
         {channels.map((ch, idx) => (
           <motion.a
             key={ch.id}
@@ -86,15 +99,15 @@ export default function CommLink() {
             <div className="text-primary mb-6 transform group-hover:scale-110 group-hover:text-accent transition-all duration-500">
               {ch.icon}
             </div>
-            
+
             <h3 className="font-sans font-medium text-[20px] text-primary tracking-wide mb-2">
               {ch.label}
             </h3>
-            
+
             <div className="font-mono text-[12px] text-dim mb-8 group-hover:text-primary transition-colors duration-300">
               {ch.handle}
             </div>
-            
+
             <div className="relative w-full border border-white/10 rounded-full py-3 text-primary font-sans font-medium text-[11px] overflow-hidden group-hover:bg-accent group-hover:border-accent group-hover:text-void transition-all duration-300 uppercase tracking-widest">
               <span className="relative z-10">Open Channel</span>
             </div>
@@ -102,7 +115,7 @@ export default function CommLink() {
         ))}
       </div>
 
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0 }}
         animate={inView ? { opacity: 1 } : { opacity: 0 }}
         transition={{ duration: 1, delay: 0.8 }}
